@@ -16,7 +16,7 @@ Array = [random.randint(0, round(Arraylength * 2)) for i in range(Arraylength)]
 
 
 
-getRuntime = input("""Do you want performance measurement enabled?
+getRuntime = input("""Kowalski Analyse?
       enter 1 for True
       and 0 for False
       """)
