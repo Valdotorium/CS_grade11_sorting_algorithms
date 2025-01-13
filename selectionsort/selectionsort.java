@@ -16,16 +16,19 @@ public class selectionsort {
         int startIndex = 0;
         while (startIndex < arr.length) {
             int currentIndex = startIndex;
-            int bestValue= arr[startIndex];
+            int bestIndex = startIndex;
             while (currentIndex < arr.length) {
-                if (arr[currentIndex] < bestValue){
-                    bestValue = arr[currentIndex];
-                    int temp = arr[startIndex];
-                    arr[startIndex] = bestValue;
-                    arr[currentIndex] = temp;
+                if (arr[currentIndex] < arr[bestIndex]){
+                    bestIndex = currentIndex;
+
                 }
+                
                 currentIndex++;
             }
+            // Swap the best element with the current element
+            int temp = arr[startIndex];
+            arr[startIndex] = arr[bestIndex];
+            arr[bestIndex] = temp;
 
             startIndex++;
         }
